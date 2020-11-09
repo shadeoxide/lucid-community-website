@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <system.webServer>
-  <rewrite>
-    <rules>
-      <rule name="Drop WWW" enabled="true" stopProcessing="true">
-        <match url=".*" />
-        <conditions>
-          <add input="{HTTP_HOST}" pattern="^www.(.*)" />
-        </conditions>
-        <action type="Redirect" redirectType="Permanent" url="https://{C:1}{REQUEST_URI}" />
-      </rule>
-    </rules>
-  </rewrite>
-</system.webServer>
-  <head>
+   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Lucid">
